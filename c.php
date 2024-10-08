@@ -37,7 +37,7 @@
                     <td><input type="text" name="desc"></td>
                 </tr>
                 <tr>
-                    <td>Local do Evento</td>
+                    <td>Local do Evento:</td>
                     <td><input type="text" name="lcl"></td>
                 </tr>
                 <tr>
@@ -45,6 +45,7 @@
                     <td><input type="text" name="rese"></td>
                 </tr>
             </table>
+            <input type="submit" value="Cadastrar Evento">
         </fieldset>
     </form>
     <?php
@@ -56,19 +57,54 @@
     $conexao = mysqli_connect($host, $user, $pass, $base);
     
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        $id = $_POST["id"];
-        $nome = $_POST["nme"];
-        $data = $_POST["dte"];
-        $init = $_POST["hdi"];
-        $term = $_POST["hdt"];
-        $desc = $_POST["desc"];
-        $local = $_POST["lcl"];
-        $resp = $_POST["rese"];
+        $id = mysqli_real_escape_string($conexao, $_POST["id"]);
+        $nome = mysqli_real_escape_string($conexao, $_POST["nme"]);
+        $data = mysqli_real_escape_string($conexao, $_POST["dte"]);
+        $init = mysqli_real_escape_string($conexao, $_POST["hdi"]);
+        $term = mysqli_real_escape_string($conexao, $_POST["hdt"]);
+        $desc = mysqli_real_escape_string($conexao, $_POST["desc"]);
+        $local = mysqli_real_escape_string($conexao, $_POST["lcl"]);
+        $resp = mysqli_real_escape_string($conexao, $_POST["rese"]);
 
-        $input = mysqli_query($conexao, "INSERT INTO eventos (id, nome_do_evento, data_do_evento, hora_de_inicio, hora_de_termino, desc_event, local_event, resp_event)")
+        $input = mysqli_query($conexao, "INSERT INTO eventos (id, nome_do_evento, data_do_evento, hora_de_inicio, hora_de_termino, desc_event, local_event, resp_event) VALUES ('$id', '$nome', '$data', '$init', '$term', '$desc', '$local', '$resp')");
+    
+        if ($input) {
+            echo "<p>Cadastro Realizado com sucesso!!!</p>";
+        } else {
+            echo "<p>Error: " . mysqli_error($conexao) . "</p>";
+        }
     }
-    
-    
+
+    $resu = mysqli_query($conexao, "SELECT * FROM eventos");
+    echo "<center><table border='3'>
+            <tr>
+                <td>Cód Evento</td>
+                <td>Nome do Evento</td>
+                <td>Data do evento</td>
+                <td>Horário de início</td>
+                <td>Horário do término</td>
+                <td>Descrição do evento</td>
+                <td>Local</td>
+                <td>Responsável</td>
+            </tr>";
+
+    while ($escrever = mysqli_fetch_array($resu)) {
+        echo "<tr>
+            <td>{$escrever['id']}</td>
+            <td>{$escrever['nome_do_evento']}</td>
+            <td>{$escrever['data_do_evento']}</td>
+            <td>{$escrever['hora_de_inicio']}</td>
+            <td>{$escrever['hora_de_termino']}</td>
+            <td>{$escrever['desc_event']}</td>
+            <td>{$escrever['local_event']}</td>
+            <td>{$escrever['resp_event']}</td>
+        </tr>";
+    }
+        
+    echo "</table></center>";
+    echo "<br><br>";
+
+    mysqli_close($conexao);
     ?>
 </body>
 </html>
