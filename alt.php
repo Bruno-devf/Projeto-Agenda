@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./ag.png" type="image/png">
+    <link rel="icon" href="./upd.png" type="image/png">
     <link rel="stylesheet" href="styles6.css">
-    <title>Cadastrar Evento</title>
+    <title>Atualizar Evento</title>
 </head>
 <body>
+<div class= "body-content">
     <h1>Atualizar Evento</h1>
     <form action="" method="POST">
         <fieldset>
@@ -113,5 +114,9 @@
     </div>
 
     <a href='index.php'>HOME</a>
+    </div>
+    <footer>
+         Copyright 2024 © - Events™ 
+    </footer>
 </body>
 </html>

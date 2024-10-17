@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./all.png" type="image/png">
     <title>Lista de Eventos</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -45,5 +46,8 @@
     </div>
 
     <a href='index.php'>HOME</a>
+    <footer>
+        Copyright 2024 © - Events™ 
+    </footer>
 </body>
 </html>

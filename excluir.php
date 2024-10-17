@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./del.png" type="image/png">
     <link rel="stylesheet" href="styles1.css">
     <title>Deletar Evento</title>
 </head>
@@ -47,5 +48,8 @@
     mysqli_close($conexao);
     ?>
     <a href='index.php'>HOME</a>
+    <footer>
+        Copyright 2024 © - Events™ 
+    </footer>
 </body>
 </html>

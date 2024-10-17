@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #858585;
+    background-color: #AFAFAF;
     color: #333;
     margin: 0;
     padding: 20px;
@@ -49,4 +49,14 @@ input[type="submit"] {
 
 .event-card p {
     margin: 5px 0;
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #007BFF;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
