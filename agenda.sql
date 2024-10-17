@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 10/10/2024 às 03:46
+-- Tempo de geração: 17/10/2024 às 03:35
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -31,8 +31,8 @@ CREATE TABLE `eventos` (
   `id` int(255) NOT NULL,
   `nome_do_evento` varchar(255) NOT NULL,
   `data_do_evento` date NOT NULL,
-  `hora_de_inicio` time(6) NOT NULL,
-  `hora_de_termino` time(6) NOT NULL,
+  `hora_de_inicio` time NOT NULL,
+  `hora_de_termino` time NOT NULL,
   `desc_event` varchar(255) NOT NULL,
   `local_event` varchar(255) NOT NULL,
   `resp_event` varchar(255) NOT NULL
@@ -43,10 +43,9 @@ CREATE TABLE `eventos` (
 --
 
 INSERT INTO `eventos` (`id`, `nome_do_evento`, `data_do_evento`, `hora_de_inicio`, `hora_de_termino`, `desc_event`, `local_event`, `resp_event`) VALUES
-(25, 'Baile da DZ7', '0000-00-00', '21:00:00.000000', '06:00:00.000000', 'Bailão com whisky e redbull com participação especial do DJ Arana, DJ Wizzard e Kanye West.', 'Avenida Hebe Camargo', 'Playboy Carti'),
-(36, 'Show Clandestino do Kanye West', '2030-08-14', '23:00:00.000000', '05:50:00.000000', 'Show do melhor rapper da história acontecendo aqui em Quixadá no Ceará, não perda (vale lembrar para não divulgarem esse show em platarformas famosas)', 'Quixadá', 'Naldo'),
-(56, '89.8', '2024-10-21', '22:47:00.000000', '03:46:00.000000', 'hujk', 'vyugiu', 'vguouy'),
-(69, 'Aniversário do Berserker\"s F.C', '2069-02-12', '05:00:00.000000', '03:39:00.000000', 'Aniversário do Segundo gigante do mundo (primeiro é o Corinthians)', 'Arena Eclipse', 'peter griffin do Pará');
+(25, 'Baile da DZ7', '0000-00-00', '21:00:00', '06:00:00', 'Bailão com whisky e redbull com participação especial do DJ Arana, DJ Wizzard e Kanye West.', 'Avenida Hebe Camargo', 'Playboy Carti'),
+(36, 'Show Clandestino do Kanye West', '2030-08-14', '23:00:00', '05:50:00', 'Show do melhor rapper da história acontecendo aqui em Quixadá no Ceará, não perda (vale lembrar para não divulgarem esse show em platarformas famosas)', 'Quixadá', 'Naldo'),
+(69, 'Aniversário do Berserker\"s F.C', '2069-02-12', '05:00:00', '03:39:00', 'Aniversário do Segundo gigante do mundo (primeiro é o Corinthians)', 'Arena Eclipse', 'peter griffin do Pará');
 
 --
 -- Índices para tabelas despejadas
