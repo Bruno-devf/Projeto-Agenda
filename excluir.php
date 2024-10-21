@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./del.png" type="image/png">
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="excluir.css">
     <title>Deletar Evento</title>
 </head>
 <body>
@@ -39,7 +39,7 @@
         $delete_query = "DELETE FROM eventos WHERE id='$delete_id'";
         
         if (mysqli_query($conexao, $delete_query)) {
-            echo "<p>Evento deletado com sucesso.</p>";
+            echo "<p class='success-message'>Evento deletado com sucesso.</p>";
         } else {
             echo "<p>Erro ao deletar evento: " . mysqli_error($conexao) . "</p>";
         }
@@ -47,7 +47,7 @@
 
     mysqli_close($conexao);
     ?>
-    <a href='index.php'>HOME</a>
+    <center class= "cen"><a href='index.php'>HOME</a></center>
     <footer>
         Copyright 2024 © - Events™ 
     </footer>

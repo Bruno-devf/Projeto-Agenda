@@ -3,7 +3,10 @@ body {
     background-color: #AFAFAF;
     color: #333;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -59,6 +62,23 @@ input[type="submit"] {
 
 .event-card p {
     margin: 5px 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px; 
+    background-color: #007BFF; 
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+.cen {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
 }
 footer {
     text-align: center;

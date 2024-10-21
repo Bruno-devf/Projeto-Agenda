@@ -10,8 +10,9 @@ body {
 }
 
 .body-content {
-    flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+    flex: 1;
     padding: 20px;
+    margin-bottom: 80px; /* Ajuste para o tamanho do footer */
 }
 
 h1 {
@@ -70,13 +71,31 @@ form {
     margin: 5px 0;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px; 
+    background-color: #007BFF; 
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+.cen {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom:10PX;
+}
+
 footer {
     text-align: center;
     padding: 20px 0;
     background-color: #007BFF;
     color: white;
     width: 100%;
-    position: relative;
-    bottom: 0;
-    left: 0;
+
 }

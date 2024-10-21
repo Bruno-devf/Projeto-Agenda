@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./ag.png" type="image/png">
-    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Eventos</title>
 </head>
 <body>
     <br>
-    <center><h1>AGENDA DE EVENTOS</h1></center>
+    <header><h1 class= "h1h">AGENDA DE EVENTOS</h1></header>
     <div class="link-container">
         <div class="link-item">
             <h1><a href='c.php'>Cadastrar Evento</a></h1>

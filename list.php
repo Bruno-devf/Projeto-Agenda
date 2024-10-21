@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./all.png" type="image/png">
     <title>Lista de Eventos</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="list.css">
 </head>
 <body>
     <h1>Lista de Eventos</h1>
@@ -45,7 +45,7 @@
         ?>
     </div>
 
-    <a href='index.php'>HOME</a>
+    <div class="cen"><a href='index.php'>HOME</a></div>
     <footer>
         Copyright 2024 © - Events™ 
     </footer>

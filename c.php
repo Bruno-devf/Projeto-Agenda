@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./ca.png" type="image/png">
-    <link rel="stylesheet" href="styles4.css">
+    <link rel="stylesheet" href="c.css">
     <title>Cadastrar Evento</title>
 </head>
 <body>
@@ -53,7 +53,6 @@
 
         <center><h2>Eventos Cadastrados</h2></center>
         <?php
-        // Conexão ao banco de dados
         $host = "localhost"; 
         $user = "root";
         $pass = "";
@@ -102,9 +101,9 @@
 
         mysqli_close($conexao);
         ?>
-        <a href='index.php'>HOME</a>
+        
     </div>
-
+    <div><center class= "cen"><a href='index.php'>HOME</a></center></div>
     <footer>
         Copyright 2024 © - Events™ 
     </footer>

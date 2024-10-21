@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./upd.png" type="image/png">
-    <link rel="stylesheet" href="styles6.css">
+    <link rel="stylesheet" href="alt.css">
     <title>Atualizar Evento</title>
 </head>
 <body>
-<div class= "body-content">
+<div class="body-content">
     <h1>Atualizar Evento</h1>
+    
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update'])) {
+        echo "<p class='success-message'>Evento atualizado com sucesso!</p>";
+    }
+    ?>
+
     <form action="" method="POST">
         <fieldset>
             <legend>Insira os dados do evento que deseja atualizar</legend>
@@ -51,7 +58,7 @@
         </fieldset>
     </form>
 
-    <center><h2>Eventos Cadastrados</h2></center>
+    <center><h2>Eventos Cadastrados que podem ser atualizados ou já foram atualizados</h2></center>
     <div class="event-container">
         <?php
         $host = "localhost"; 
@@ -85,7 +92,6 @@
                 WHERE id = '$id'";
 
             if (mysqli_query($conexao, $update_query)) {
-                echo "<p>Evento atualizado com sucesso!</p>";
             } else {
                 echo "<p>Error: " . mysqli_error($conexao) . "</p>";
             }
@@ -113,10 +119,10 @@
         ?>
     </div>
 
-    <a href='index.php'>HOME</a>
-    </div>
-    <footer>
-         Copyright 2024 © - Events™ 
-    </footer>
+    <center class="cen"><a href='index.php'>HOME</a></center>
+</div>
+<footer>
+     Copyright 2024 © - Events™ 
+</footer>
 </body>
 </html>
